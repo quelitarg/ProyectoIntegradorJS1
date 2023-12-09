@@ -11,9 +11,11 @@ const adminRoutes = require('./src/routes/adminRoutes.js');
 
 /*requerimos la dependencia */
 require('dotenv').config();
+/*seteamos las variables de entorno
+dotenv.config({path: './env/.env'}); */
 
 //cookieParser.set
-app.set('cookieParser');
+app.set('cookieParser', 'dev');
 app.set('bodyParser');
 /*Leemos la constante */
 const PORT = process.env.PORT;
@@ -30,14 +32,12 @@ app.set('views', './src/views');
 * Convertimos los datos entrantes en formato
 * application/x-www-form-urlencoded y application/json
 * a un formato entendible por el servidor
-*/
+* datos enviados desde el formulario*/
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-
 /* Override para habilitar los métodos PUT y DELETE */
-
 app.use(methodOverride('_method'));
 
 /* Rutas */
