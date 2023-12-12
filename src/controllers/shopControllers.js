@@ -7,7 +7,7 @@ module.exports = {
     const { data } = items;
     res.render( './shop',{
       view: {
-        title: "Shop | Funkoshop"
+        title: 'Shop | Funkoshop'
       },
       items: data
       
@@ -24,7 +24,7 @@ module.exports = {
 
     res.render('./shop/detail', {
       view: {
-        title: "Item | Funkoshop"
+        title: 'Item | Funkoshop'
       },
       item: data[0]
     });

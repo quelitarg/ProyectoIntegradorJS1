@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mainRoutes = require('./src/routes/mainRoutes.js');
 const adminRoutes = require('./src/routes/adminRoutes.js');
+//const path = require('path');
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
@@ -48,11 +49,11 @@ app.use('/home', mainRoutes);
 app.use('/contacto', mainRoutes);
 app.use('/admin', adminRoutes);
 
-/* Ruta para mostrar el formulario de carga de archivos
-app.get('/', (req, res) => {
-    res.render('home');
+/* Ruta para mostrar el formulario de carga de archivos*/
+app.get('/home', (req, res) => {
+    res.render('../views/home');
   });
-//Middleware para manejar el error 404
+/*Middleware para manejar el error 404
 app.use((req, res, next)=> {
     res.status(404).send('Recurso no encontrado');
 });*/

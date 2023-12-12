@@ -23,7 +23,7 @@ module.exports = {
     const licences = await LicenceService.getAllItemsLicences();
     res.render('home', {
       view: {
-        title: "Home | Funkoshop"
+        title: 'Home | Funkoshop'
       },
       collections: licences.data
     });

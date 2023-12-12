@@ -10,10 +10,10 @@ const {
 } = require('../controllers/shopControllers');
 
 
-router.get('/', shopView);
-router.get('/item/:id', itemView);
-router.post('/item/:id/add', addItemToCart);
-router.get('/cart', cartView);
-router.post('/cart', checkout);
+router.get('/shop', shopView);
+router.get('/shop/item/:id', itemView);
+router.post('/shop/item/:id/add', addItemToCart);
+router.get('/shop/carrito', cartView);
+router.post('/shop/carrito', checkout);
 
 module.exports = router;
