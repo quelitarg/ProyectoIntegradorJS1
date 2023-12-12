@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mainRoutes = require('./src/routes/mainRoutes.js');
 const adminRoutes = require('./src/routes/adminRoutes.js');
-//falta multer
+
 const app = express();
 const upload = multer({ dest: 'uploads/' });
 

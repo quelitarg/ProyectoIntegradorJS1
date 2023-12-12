@@ -1,4 +1,4 @@
-module.exports= {
+/*module.exports= {
 home:(req, res) => {
     res.render('home', {
         title: 'Inicio | CRUD MVC'
@@ -15,8 +15,8 @@ contacto:(req, res)=> {
     });
 }
 }
-
-/*const LicenceService = require('../services/licenceService');
+*/
+const LicenceService = require('../services/licenceService');
 
 module.exports = {
   homeView: async (req, res) => {
@@ -31,4 +31,4 @@ module.exports = {
   contactView:(req, res) => res.send('Contact View Route'),
   aboutView:(req, res) => res.send('About View Route'),
   faqsView:(req, res) => res.send('FAQs View Route'),
-};*/
+};
