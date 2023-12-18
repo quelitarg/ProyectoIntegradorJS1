@@ -21,11 +21,27 @@ const LicenceService = require('../services/licenceService');
 module.exports = {
   homeView: async (req, res) => {
     const licences = await LicenceService.getAllItemsLicences();
-    res.render('home', {
+    res.render('./home', {
       view: {
         title: 'Home | Funkoshop'
       },
-      collections: licences.data
+      collections:/*[
+        {
+        product_id: 1,
+        licence_name: 'Pokemon',
+        category_name: 'Figuras coleccionables',
+        product_name: 'Pidgeotto',
+        product_description: 'Figura coleccionable pokemon',
+        price: 1799.99,
+        dues: 10,
+        sku: 'PKM001001',
+        image_front: '/multimedia/pokemon/pidgeotto-1.webp',
+        image_back: '../../multimedia/pokemon/pidgeotto-box.webp'
+        }
+        ]*/
+        [licences]
+        
+        //licences.data
     });
   },
   contactView:(req, res) => res.send('Contact View Route'),

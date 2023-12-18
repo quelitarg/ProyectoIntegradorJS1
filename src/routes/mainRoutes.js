@@ -22,7 +22,7 @@ const {
   faqsView } = require('../controllers/mainControllers');
 
   /* MAIN ROUTES */
-
+router.get('/', homeView);
 router.get('/home', homeView);
 router.get('/contact', contactView);
 router.get('/about', aboutView);

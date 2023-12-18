@@ -20,11 +20,11 @@ require('dotenv').config();
  * Creamos un pool de conexiones
  */
 const pool = mysql.createPool({
-    host: process.env.HOST, //usamos las variables de entorno
-    user: process.env.USER,
-    password:process.env.DBPASS,
-    database: process.env.DB,
-    port: 3306,
+    host: process.env.DB_HOST, //usamos las variables de entorno
+    user: process.env.DB_USER,
+    password:process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,

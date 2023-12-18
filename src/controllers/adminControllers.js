@@ -1,6 +1,7 @@
 const ItemsService = require('../services/itemService');
 const CategoryService = require('../services/categoryService');
 const LicenceService = require('../services/licenceService');
+const adminView = require('../routes/adminRoutes');
 
 module.exports = {
   adminView: async (req, res) => {
@@ -8,9 +9,8 @@ module.exports = {
     res.render( './admin/admin',
     {
       view: {
-        title: 'List of Products | Admin Funkoshop'
-      },
-      items: data
+        title: 'List of Products | Admin Funkoshop'},
+      data
     });
   },
   createView:  async (req, res) =>{
@@ -21,6 +21,7 @@ module.exports = {
       }
     });
   },
+  
   createItem:  async (req, res) => {
     const item = req.body;
     await ItemsService.create(item);
@@ -58,17 +59,5 @@ module.exports = {
 
     await ItemsService.delete(id);
     res.redirect('/admin');
-  },
-  loginView:  (req, res) => res.render('./auth/login', {
-    view: {
-      title: 'Login | Funkoshop'
-    }
-  }),
-  loginUser:  (req, res) => res.send('Login Route that receive the data when user click login button'),
-  registerView:  (req, res) => res.render('./auth/register', {
-    view: {
-      title: 'Register | Funkoshop'
-    }
-  }),
-  registerUser:  (req, res) => res.send('Register Route that receive the data when user click register button'),
-};
+  }
+}
