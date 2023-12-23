@@ -16,3 +16,5 @@ module.exports = {
   }),
   registerUser:  (req, res) => res.send('Register Route that receive the data when user click register button'),
 };
+
+

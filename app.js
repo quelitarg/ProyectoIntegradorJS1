@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const multer = require('multer');
-//const ejs = require('ejs');
 const dotenv = require('dotenv');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
@@ -22,7 +21,7 @@ const PORT = process.env.PORT;
 
 /* Estáticos */
 
-app.set(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 //configuración ejs
 app.set('view engine', 'ejs');
@@ -45,16 +44,16 @@ dotenv.config({path: './.env'});*/
 //cookieParser.set
 app.set('cookieParser', 'dev');
 app.set('bodyParser');
+
 /* Override para habilitar los métodos PUT y DELETE */
 app.use(methodOverride('_method'));
 
 /* Rutas */
 app.use('/', mainRoutes);
-//app.use('/home', mainRoutes);
-//app.use('/auth',authRoutes);
+app.use('/auth',authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/shop', shopRoutes);
-app.use('/admin', authRoutes);
+
 
 /* Ruta para mostrar el formulario de carga de archivos
 app.get('/home', (req, res) => {

@@ -1,47 +1,55 @@
-/*module.exports= {
-home:(req, res) => {
-    res.render('home', {
-        title: 'Inicio | CRUD MVC'
-    });
-},
-about:(req, res)=> {
-    res.render('nosotros', {
-        title:'Nosotros | CRUD MVC'
-    });
-},
-contacto:(req, res)=> {
-    res.render('contacto', {
-        title:'Nosotros | CRUD MVC'
-    });
-}
-}
-*/
 const LicenceService = require('../services/licenceService');
+const ItemsService = require('../services/itemService');
 
 module.exports = {
   homeView: async (req, res) => {
     const licences = await LicenceService.getAllItemsLicences();
+    const data  = await ItemsService.getAllItems();
     res.render('./home', {
       view: {
         title: 'Home | Funkoshop'
       },
-      collections:/*[
+      collections:[
         {
-        product_id: 1,
-        licence_name: 'Pokemon',
-        category_name: 'Figuras coleccionables',
-        product_name: 'Pidgeotto',
-        product_description: 'Figura coleccionable pokemon',
-        price: 1799.99,
-        dues: 10,
-        sku: 'PKM001001',
-        image_front: '/multimedia/pokemon/pidgeotto-1.webp',
-        image_back: '../../multimedia/pokemon/pidgeotto-box.webp'
+            'product_id': 1,
+            'licence_name': 'harry-potter',
+            'category_name': 'Funkos',
+            'product_name': 'Harry Potter',
+            'product_description': 'Figura coleccionable de Harry Potter',
+            'product_price': 39990.00,
+            'dues': 6,
+            'product_sku': 'HAR001001',
+            'img_front': '/multimedia/harry-potter/harry-1.webp',
+            'img_back': '/multimedia/harry-potter/harry-box.webp'
+        },
+        {
+            "product_id": 8,
+            "licence_name": "pokemon",
+            "category_name": "Funkos",
+            "product_name": "Pikachu",
+            "product_description": "Figura coleccionable de Pikachu",
+            "product_price": 39990.00,
+            "dues": 6,
+            "product_sku": "POK001008",
+            "img_front": "/multimedia/pokemon/pikachu-1.webp",
+            "img_back": "/multimedia/pokemon/pikachu-box.webp"
+        },
+        {
+            "product_id": 13,
+            "licence_name": "star-wars",
+            "category_name": "Funkos",
+            "product_name": "Stormtrooper",
+            "product_description": "Figura coleccionable de un Stormtrooper",
+            "product_price": 39990.00,
+            "dues": 6,
+            "product_sku": "STA001013",
+            "img_front": "/multimedia/star-wars/trooper-1.webp",
+            "img_back": "/multimedia/star-wars/trooper-box.webp"
         }
-        ]*/
-        [licences]
+    ],
+       /* [licences],*/
         
-        //licences.data
+        items: [data]
     });
   },
   contactView:(req, res) => res.send('Contact View Route'),

@@ -1,11 +1,9 @@
 <%- include('../partials/header')%>
 
 <main id="shop" class="container"> <!-- Shop -->
-    <aside class="shop__filters">
-
-        <!-- Buscar -->
-        <form action="./shop/find/" method="GET">
-            
+    <aside class="shop__filters filters>
+    <!-- Buscar -->
+        <form action="/shop/shop" method="GET">
             <div class="filters__search">
                 <label class="filters_title" for="search">BUSCAR</label>
                 <input type="text" name="search" id="search" placeholder="item o categoría">
@@ -20,16 +18,16 @@
             <!-- js vinculado para esta función -->
 
             <select name="orderby" id="orderby" onchange="redirectToSelected()">
-                <!-- Itera sobre categorías y licencias para mostrar menú desplegable -->
+                 Itera sobre categorías y licencias para mostrar menú desplegable 
                 <% const categories=[...new Set(items.map(item=> item.category_name))];
-                        categories.forEach(category=>{ %>
-                <option value="/shop/filter-category/<%=category%>" <% if
+                        categories.forEach(category =>{ %>
+                <option value="/shop/filter-category/<%= category%>" <% if
                             (showFirst.toLowerCase()==category.toLowerCase()){ %> selected <% } %>> <%=category%>
                 </option>
                 <% })%>
 
                 <% const licences=[...new Set(items.map(item=> item.licence_name))];
-                licences.forEach(licence=>{ %>
+                licences.forEach(licence =>{ %>
                 <option value="/shop/filter-licence/<%=licence%>" <% if
                                     (showFirst.toLowerCase()==licence.toLowerCase()){ %> selected <% } %>>
                     <%=licence%>
@@ -37,7 +35,7 @@
                 <% })%>
 
             </select>
-
+       
         </div>
 
         <div class="filters__price">
@@ -45,27 +43,27 @@
 
             <div>
                 <label for="min">MIN</label>
-                <input type="number" name="min" id="min" min="0" max="99000" placeholder="0" step="1000">
+                <input type="number" name="min" id="min" placeholder="0" >
                 <label for="max">&nbsp- MAX</label>
-                <input type="number" name="max" id="max" min="0" max="99000" placeholder="0" step="1000">
+                <input type="number" name="max" id="max" placeholder="0" >
             </div>
         </div>
         <div class="filters_checks">
             <span class="filters_title" for="filter">FILTRAR</span>
             <div>
-                <input type="checkbox" name="filter" id="news" value="">
+                <input type="checkbox" name="filter" id="news" value="news">
                 <label for="news">NUEVOS</label>
             </div>
             <div>
-                <input type="checkbox" name="filter" id="offers" value="">
+                <input type="checkbox" name="filter" id="offers" value="offers">
                 <label for="offers">OFERTAS</label>
             </div>
-            <div></div>
-                <input type="checkbox" name="filter" id="limited" value="">
+            <div>
+                <input type="checkbox" name="filter" id="specials" value="specials">
                 <label for="limited">EDICIÓN ESPECIAL</label>
             </div>
             <div>
-                <input type="checkbox" name="filter" id="fav" value="">
+                <input type="checkbox" name="filter" id="favs" value="favs">
                 <label for="fav">FAVORITOS</label>
             </div>
         </div>
@@ -90,14 +88,15 @@
                     };
                     // usamos nuestra función en el método sort
                     const sortedItems = items.sort(compareFunction);
+npm run dev
 
                     // luego iteramos sobre el array reordenado para mostrar los items
-                    sortedItems.forEach( item=> {
+                    sortedItems.forEach( item => {
                     %>
 
             <li class="shop__item">
                 <article class="card-item">
-                    <a class="card-item__link" href="./item/<%= item.product_id%>">
+                    <a class="card-item__link" href="/shop/item/<%= item.product_id%>">
                         <picture class="card-item__cover">
 
                             <% if(item.product_id> 13){%>
@@ -142,6 +141,6 @@
 
 </main>
 
-<script src="/public/js/shop.js"></script>
+<script src="/js/shop.js"></script>
 
 <%- include('../partials/footer')%>

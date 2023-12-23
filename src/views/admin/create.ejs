@@ -3,9 +3,9 @@
     <main class="container create__main">
 
         <!-- multipart/form-data indica que vamos a enviar archivos además de texto -->
-        <form action="../admin/create" method="POST" enctype="multipart/form-data">
+        <form action="/admin/create" method="POST" enctype="multipart/form-data">
 
-            <H1>CREAR NUEVO ITEM</H1>
+            <h1>CREAR NUEVO ITEM</h1>
 
             <div class="editar-item">
 
@@ -23,8 +23,8 @@
                     <option value="" disabled selected hidden>Seleccionar</option>
 
                     <% licences.forEach(licence=>{ %>
-                        <option value="opc<%=licence.licence_id%>">
-                            <%=licence.licence_name%>
+                        <option value="opc<%= licence.product_id%>">
+                            <%= licence.licence_name%>
                         </option>
                         <% }) %>
 
@@ -73,7 +73,7 @@
             </div>
 
             <div class="editar-item">
-
+                <select>
                 <a class="boton" href="#">Agregar Producto</a>
                 <a class="boton" href="@">Limpiar</a>
                 </select>

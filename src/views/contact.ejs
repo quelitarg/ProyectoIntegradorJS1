@@ -1,4 +1,20 @@
 <%- include('partials/header')%>
+<main id="register" class="container">
+    <div class="register__header">
+        <h2 class="register__title">FORMULARIO DE CONTACTO</h2>
+    </div>
+    <form class="register__form" action="/contact" method="POST" enctype="application/x-www-form-urlencoded">
+    <div>
+        <label class="form__label" for="name">Motivo o Asunto</label>
+        <input class="form__input" type="text" name="name" id="name" placeholder="Motivo" required>
+    </div>
+    <div class="form__box--grid">
+    <label class="form__label" for="name">Descripción</label>
+    <input class="form__input" type="text" name="name" id="name" placeholder="Descripción" required>
+    </div>
 
 
+    <button class="item__submit btn btn--primary btn--medium" type="submit">Enviar</button>
+    </form>
+</main>
 <%- include('partials/footer')%>

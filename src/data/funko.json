@@ -1,7 +1,7 @@
 [
     {
         "product_id": 1,
-        "licence_name": "Harry Potter",
+        "licence_name": "harry-potter",
         "category_name": "Figuras coleccionables",
         "product_name": "Harry Potter",
         "product_description": "Figura coleccionable de Harry Potter",
@@ -13,7 +13,7 @@
     },
     {
         "product_id": 2,
-        "licence_name": "Harry Potter",
+        "licence_name": "harry-potter",
         "category_name": "Figuras coleccionables",
         "product_name": "Hermione Granger",
         "product_description": "Figura coleccionable de Hermione Granger",
@@ -25,7 +25,7 @@
     },
     {
         "product_id": 3,
-        "licence_name": "Harry Potter",
+        "licence_name": "harry-potter",
         "category_name": "Figuras coleccionables",
         "product_name": "Luna Lovewood",
         "product_description": "Figura coleccionable de Luna Lovewood",
@@ -37,7 +37,7 @@
     },
     {
         "product_id": 4,
-        "licence_name": "Harry Potter",
+        "licence_name": "harry-potter",
         "category_name": "Figuras coleccionables",
         "product_name": "Snape Patronus",
         "product_description": "Figura coleccionable del Patronus de Snape",
@@ -49,7 +49,7 @@
     },
     {
         "product_id": 5,
-        "licence_name": "Pokemon",
+        "licence_name": "pokemon",
         "category_name": "Figuras coleccionables",
         "product_name": "Charmander",
         "product_description": "Figura coleccionable de Charmander",
@@ -61,7 +61,7 @@
     },
     {
         "product_id": 6,
-        "licence_name": "Pokemon",
+        "licence_name": "pokemon",
         "category_name": "Figuras coleccionables",
         "product_name": "Dragonite",
         "product_description": "Figura coleccionable de Dragonite",
@@ -73,7 +73,7 @@
     },
     {
         "product_id": 7,
-        "licence_name": "Pokemon",
+        "licence_name": "pokemon",
         "category_name": "Figuras coleccionables",
         "product_name": "Pidgeotto",
         "product_description": "Figura coleccionable de Pidgeotto",
@@ -85,7 +85,7 @@
     },
     {
         "product_id": 8,
-        "licence_name": "Pokemon",
+        "licence_name": "pokemon",
         "category_name": "Figuras coleccionables",
         "product_name": "Pikachu",
         "product_description": "Figura coleccionable de Pikachu",
@@ -97,7 +97,7 @@
     },
     {
         "product_id": 9,
-        "licence_name": "Pokemon",
+        "licence_name": "pokemon",
         "category_name": "Figuras coleccionables",
         "product_name": "Vulpix",
         "product_description": "Figura coleccionable de Vulpix",
@@ -109,7 +109,7 @@
     },
     {
         "product_id": 10,
-        "licence_name": "Star Wars",
+        "licence_name": "star-wars",
         "category_name": "Figuras coleccionables",
         "product_name": "Grogu",
         "product_description": "Figura coleccionable de Grogu",
@@ -121,7 +121,7 @@
     },
     {
         "product_id": 11,
-        "licence_name": "Star Wars",
+        "licence_name": "star-wars",
         "category_name": "Figuras coleccionables",
         "product_name": "Bobba Fett",
         "product_description": "Figura coleccionable de Bobba Fett",
@@ -133,7 +133,7 @@
     },
     {
         "product_id": 12,
-        "licence_name": "Star Wars",
+        "licence_name": "star-wars",
         "category_name": "Figuras coleccionables",
         "product_name": "Luke Skywalker",
         "product_description": "Figura coleccionable de Luke Skywalker",
@@ -145,7 +145,7 @@
     },
     {
         "product_id": 13,
-        "licence_name": "Star Wars",
+        "licence_name": "star-wars",
         "category_name": "Figuras coleccionables",
         "product_name": "Stormtrooper",
         "product_description": "Figura coleccionable de un Stormtrooper",

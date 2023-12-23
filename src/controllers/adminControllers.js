@@ -1,31 +1,34 @@
 const ItemsService = require('../services/itemService');
 const CategoryService = require('../services/categoryService');
 const LicenceService = require('../services/licenceService');
+//const ProductsService = require('../services/productsService')
 const adminView = require('../routes/adminRoutes');
 
 module.exports = {
   adminView: async (req, res) => {
     const { data } = await ItemsService.getAllItems();
-    res.render( './admin/admin',
+    return res.render('./admin',
     {
       view: {
         title: 'List of Products | Admin Funkoshop'},
-      data
+      items:[data] 
     });
   },
-  createView:  async (req, res) =>{
 
-    res.render('./admin/create', {
+  createView:  async (req, res) =>{
+    const { licences } = await CategoryService.getAllItemsCategories();
+    res.render('.admin/create', {
       view: {
         title: 'Create Product | Admin Funkoshop'
-      }
+      },
+      licences
     });
   },
   
   createItem:  async (req, res) => {
     const item = req.body;
     await ItemsService.create(item);
-    res.redirect('/admin');
+    res.redirect('./admin');
   },
   bulkCreate:  async (req, res) => {
     const items = req.body;
@@ -38,7 +41,7 @@ module.exports = {
     const { data: licences } = await LicenceService.getAllItemsLicences();
     const { data } = await ItemsService.getItem(id);
     console.log(categories, licences);
-    res.render('./admin/edit', {
+    res.render('./edit/:id', {
       view: {
         title: `Edit Product #${id} | Admin Funkoshop`
       },

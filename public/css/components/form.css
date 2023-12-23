@@ -86,7 +86,7 @@ textarea::placeholder {
 }
 
 .form__btn {
-    font-size: var(--font-xsmall);
+    font-size: var(--font-medium);
 }
 
 .form__link {

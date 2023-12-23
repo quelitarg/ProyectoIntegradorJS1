@@ -7,7 +7,7 @@
     <section class="admin__list">
         <div class="admin__header">
             <h2>LISTADO DE PRODUCTOS</h2>
-            <span>AGREGAR<a href="./create"><iconify-icon icon="bxs:plus-square" style="color: #f33;"></iconify-icon></a></span>
+            <span>AGREGAR<a href="/admin/create"><iconify-icon icon="bxs:plus-square" style="color: #ff3333;"></iconify-icon></a></span>
         </div>
         <div class="admin-table">
             <header class="admin-table__header">
@@ -19,16 +19,17 @@
             <% items.forEach(item => { %>
             <article class="admin-table__row">
                 <p><%= item.product_id %></p>
-                <p><%= item.sku %></p>
+                <p><%= item.product_sku %></p>
                 <p><%= item.product_name %></p>
                 <p><%= item.category_name %></p>
-            <a href="./edit/<%= item.product_id %>"><iconify-icon icon="mdi:pencil" style="color: #1d84b5;"></iconify-icon></a>   
-              <form action="./delete/<%= item.product_id %>?_method=DELETE"
+            <a href="/admin/edit/<%= item.product_id %>"><iconify-icon icon="mdi:pencil" style="color: #1d84b5;"></iconify-icon></a>   
+              
+            <form action="/admin/delete/<%= item.product_id %>?_method=DELETE" method="POST">
                 <button class="admin-table__btn-delete" type="submit">
-                <iconify-icon icon="heroicons-solid:trash" style="color: #f33;"></iconify-icon></a>
+                <iconify-icon icon="heroicons-solid:trash" style="color: #ff3333;"></iconify-icon>
                 </button>
-               </form>
-            </article>
+            </form>
+        </article>
         <% }); %>
         </div>
     </section>

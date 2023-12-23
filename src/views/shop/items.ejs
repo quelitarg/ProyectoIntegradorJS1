@@ -5,9 +5,9 @@
     <section class="item">
 
         <picture class="item__img card-item__cover">
-            <img class="card-item__img--front" src="/public/multimedia/<%= item.img_front%>"
+            <img class="card-item__img--front" src="/multimedia/<%= item.img_front%>"
                 alt="Figura coleccionable de <%= item.product_name%>">
-            <img class="card-item__img--back" src="/public/multimedia/<%= item.img_back%>"
+            <img class="card-item__img--back" src="/multimedia/<%= item.img_back%>"
                 alt="Figura coleccionable de <%= item.product_name%>">
         </picture>
         <article class="item__info">
@@ -24,11 +24,13 @@
             </p>
 
             <!-- Agregar al carrito -->
-            <form class="item__cart" action="/shop/item/<%= item.product_id%>/add" method="post">
+            <form class="item__cart" action="/shop/item/<%= item.product_id%>/add" method="POST" enctype="application/x-www-form-urlencoded">
 
-                <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0"> <!-- value="1" autocomplete="off"-->
-                <button id="add" class="item__quantity" type="button">+</button>
-                <button id="subtract" class="item__quantity" type="button">-</button>
+                <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0" value="1" autocomplete="off"-->
+                <div>
+                    <button id="add" class="item__quantity_tabla" type="button">+</button>
+                    <button id="subtract" class="item__quantity_tabla" type="button">-</button>
+                </div>
                 <button class="item__submit btn btn--primary btn--medium" type="submit">Agregar al carrito</button>
 
             </form>
@@ -50,7 +52,7 @@
                             <picture class="card-item__cover">
 
                                 <% if(item.product_id> 13){%>
-                                <span class="card-item__tag">Nuevo/span>
+                                <span class="card-item__tag">Nuevo</span>
                                 <% }%>
 
                                 <img class="card-item__img--front" src="<%= item.img_front%>">
@@ -89,9 +91,9 @@
     </section>
 
 </main>
-
-<script src="/public/js/item.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+<script src="/js/item.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-<script src="/public/js/glide.js"></script>
+<script src="/js/glide.js"></script>
 
 <%- include('../partials/footer')%>

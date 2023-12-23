@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="/css/index.css">
+            <title>Contacto | Funkoshop</title>
+        </head>
+    <body>    
+    <header class="page-header"><!-- Inicio Header -->
+                <nav class="navbar container">
+                    <picture class="nabvar__logo">
+                        <a href="/home">
+                            <img src="/multimedia/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
+                        </a>
+                    </picture>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item with-submenu">
+                            <a class="navbar__link with-icon" href="/shop">SHOP<iconify-icon icon="tabler:chevron-down" style="color: white;"></iconify-icon></a>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="/shop/filter-category/funkos" class="submenu__link">Funkos</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="/shop/filter-category/remeras" class="submenu__link">Remeras</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="/shop/filter-category/llaveros" class="submenu__link">LLaveros</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="navbar__link" href="/contact">CONTACTO</a>
+                        </li class="navbar__item">
+                        <li>
+                            <a class="navbar__link" href="/auth/login">LOGIN</a>
+                        </li class="navbar__item">
+                        <li class="navbar__item">
+                            <a class="navbar__cart" href="/shop/carrito">
+                                <img src="/multimedia/icons/cart-icon.svg" alt="ícono de carrito">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header> <!--   Fin Header -->
+
+<main id="register" class="container">
+    <div class="register__header">
+        <h2 class="login__title">FORMULARIO DE CONTACTO</h2>
+    </div>
+    <form class="login__form form" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+    <div class="form__box--grid">
+        <label class="form__label" for="name">Motivo o Asunto</label>
+        <input class="form__input" type="text" name="name" id="name" placeholder="Motivo" required>
+    </div>
+    <div class="form__box--grid">
+        <label class="form__label" for="name">Descripción</label>
+        <input class="form__input" type="text" name="name" id="name" placeholder="Descripción" required>
+    </div>
+    <div class="form__submission">
+        <input class="form__btn btn btn--primary btn--medium" type="submit" value="Enviar">
+    </div>    
+    </form>
+</main>
+
+<footer class="footer">
+    <nav class="navbar container">
+        <ul class="navbar__item">
+            <li class="navbar__item">
+                <a class="navbar__link" href="../shop/shop">SHOP</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="../auth/register">REGISTRARSE</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="../auth/login">LOGIN</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="../contact">CONTACTO</a>
+            </li>
+        </ul>
+        <picture>
+            <img src="/multimedia/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
+        </picture>
+    </nav>
+    <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+<script>
+    new Glide('.glide',
+        {
+            type: 'carousel',
+            startAt: 0,
+            perView: 3,
+            gap: 30,
+            breakpoints: {
+                991: {
+                    perView: 2
+                    },
+                768: {
+                    perView: 1
+                }
+            }
+        }
+    ).mount();
+</script>
+</body>
+</html>

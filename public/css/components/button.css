@@ -26,3 +26,11 @@
 .btn--large {
     padding: var(--spacing-12) var(--spacing-28);
 }
+
+.btn--xlarge {
+    padding: var(--spacing-16) var(--spacing-36);
+}
+
+.btn--xxlarge {
+    padding: var(--spacing-28) var(--spacing-48);
+}
